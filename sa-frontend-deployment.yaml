@@ -21,7 +21,7 @@ spec:
         app: sa-frontend                                  # 6
     spec:
       containers:
-        - image: tepnimitl/sentiment-analysis-frontend:minikube
+        - image: tepnimitl/sentiment-analysis-frontend:gcloud
           imagePullPolicy: Always                         # 7
           name: sa-frontend
           ports:
