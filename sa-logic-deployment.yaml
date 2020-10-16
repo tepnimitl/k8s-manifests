@@ -8,7 +8,7 @@ spec:
   selector:
      matchLabels:
        app: sa-logic
-  replicas: 2
+  replicas: 1
   minReadySeconds: 15
   strategy:
     type: RollingUpdate

@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: sa-frontend
-  replicas: 2                                             # 2
+  replicas: 1                                             # 2
   minReadySeconds: 15
   strategy:
     type: RollingUpdate                                   # 3
@@ -21,7 +21,10 @@ spec:
         app: sa-frontend                                  # 6
     spec:
       containers:
-        - image: tepnimitl/sentiment-analysis-frontend:gcloud
+        - image: tepnimitl/sentiment-analysis-frontend:34
+          resources:
+            limits:
+              cpu: "50m"
           imagePullPolicy: Always                         # 7
           name: sa-frontend
           ports:
