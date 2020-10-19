@@ -22,6 +22,9 @@ spec:
     spec:
       containers:
       - image: tepnimitl/sentiment-analysis-web-app
+        resources:
+          limits:
+            cpu: "50m"
         imagePullPolicy: Always
         name: sa-web-app
         env:
